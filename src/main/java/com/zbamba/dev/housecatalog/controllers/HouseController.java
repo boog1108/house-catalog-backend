@@ -20,8 +20,8 @@ public class HouseController {
     @Autowired
     private HouseService houseService;
 
-    @RequestMapping(value = "/id/{id}", method = GET)
-    public ResponseEntity<List<House>> getHouseById(final @PathVariable(value = "id") int id){
+    @RequestMapping(value = "/id", method = GET)
+    public ResponseEntity<List<House>> getHouseById(final @RequestParam(value = "id") int id){
         return houseService.findById(id);
     }
 
@@ -30,8 +30,8 @@ public class HouseController {
         return houseService.findAll();
     }
 
-    @RequestMapping(value = "/city/{city}", method = GET)
-    public ResponseEntity<List<House>> getHouseByCity(final @PathVariable(value = "city") String city) {
+    @RequestMapping(value = "/city", method = GET)
+    public ResponseEntity<List<House>> getHouseByCity(final @RequestParam(value = "city") String city) {
         return houseService.findByCity(city);
     }
 

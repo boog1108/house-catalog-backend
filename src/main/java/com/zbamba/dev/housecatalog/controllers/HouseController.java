@@ -13,8 +13,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
-@RequestMapping(value = "house")
 @CrossOrigin(origins = "*")
+@RequestMapping(value = "/house")
 public class HouseController {
 
     @Autowired
